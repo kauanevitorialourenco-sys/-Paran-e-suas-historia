@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal Raízes Paranaenses</title>
+    <style>
+        /* Estilo Geral Estilo Jornal Antigo */
+        body {
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            color: #222;
+            scroll-behavior: smooth;
+        }
+
+        /* Menu de Navegação Superior */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #1a1a1a;
+            padding: 10px 0;
+            z-index: 1000;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .nav-menu a {
+            color: #f1f1f1;
+            text-decoration: none;
+            margin: 0 15px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #d4a76a;
+        }
+
+        /* Container das Folhas */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px;
+        }
+
+        /* Estilo de Cada Folha (Página) */
+        .folha {
+            background-color: #fdfaf3; /* Cor de papel envelhecido */
+            width: 800px;
+            min-height: 1100px;
+            margin: 40px 0;
+            padding: 50px;
+            box-shadow: 10px 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid #dcdcdc;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        /* Cabeçalho do Jornal */
+        .topo-jornal {
+            text-align: center;
+            border-bottom: 5px solid #222;
+            margin-bottom: 30px;
+        }
+
+        .topo-jornal h1 {
+            font-size: 60px;
+            margin: 10px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .topo-jornal p {
+            font-style: italic;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        /* Manchetes e Colunas */
+        .manchete {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .colunas {
+            column-count: 2;
+            column-gap: 40px;
+            text-align: justify;
+        }
+
+        .subtitulo {
+            font-size: 22px;
+            border-bottom: 2px solid #222;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #1a365d;
+        }
+
+        /* Estilo de Imagens */
+        .box-imagem {
+            break-inside: avoid;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .box-imagem img {
+            width: 100%;
+            border: 1px solid #000;
+            filter: sepia(30%); /* Efeito leve de foto antiga */
+        }
+
+        .legenda {
+            font-size: 12px;
+            font-style: italic;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        /* Rodapé da Página */
+        .rodape-folha {
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+            right: 50px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #ccc;
+            padding-top: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .btn-proximo {
+            background: #222;
+            color: #fff;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+
+        .btn-proximo:hover {
+            background: #d4a76a;
+            color: #222;
+        }
+
+        /* Tabelas */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #444;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        th { background: #eee; }
+
+        /* Curiosidades */
+        .curiosidade {
+            background: #f1f1f1;
+            padding: 15px;
+            border-left: 5px solid #d4a76a;
+            margin: 20px 0;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-menu">
+        <a href="#p1">CAPA</a>
+        <a href="#p2">AFRICANOS</a>
+        <a href="#p3">IMIGRAÇÃO</a>
+        <a href="#p4">MIGRANTES BR</a>
+        <a href="#p5">GUERRAS</a>
+        <a href="#p6">ECONOMIA</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="p1" class="folha">
+            <div class="topo-jornal">
+                <p>"Nossa História, Nossa Gente" - Edição Única</p>
+                <h1>Raízes Paranaenses</h1>
+                <p>Paraná, Brasil - Junho de 2024</p>
+            </div>
+
+            <div class="manchete">
+                O Paraná que Você não Conhece: Uma Viagem pela Nossa História
+            </div>
+
+            <div class="box-imagem">
+                <img src="https://images.unsplash.com/photo-1597843797221-50d890927a44?q=80&w=1000&auto=format&fit=crop" alt="Araucárias">
+                <div class="legenda">As Araucárias: Símbolo eterno da paisagem e resistência paranaense.</div>
+            </div>
+
+            <div class="colunas">
+                <h2 class="subtitulo">Editorial</h2>
+                <p>Olhar para o Paraná de hoje é enxergar um estado próspero e moderno. No entanto, para entender nossa identidade, precisamos mergulhar nas raízes. Este jornal busca resgatar a memória dos que aqui chegaram, dos que aqui já estavam e dos conflitos que moldaram nosso solo.</p>
+                <p>Nesta edição, exploramos desde a presença africana, muitas vezes esquecida, até as grandes geadas que mudaram a economia. Convidamos você, leitor, a redescobrir o Paraná através de fatos, curiosidades e imagens que contam quem somos.</p>
+            </div>
+
+            <div class="rodape-folha">
+                <span>Página 01</span>
+                <a href="#p2" class="btn-proximo">Virar Página →</a>
+            </div>
+        </section>
+
+        <section id="p2" class="folha">
+            <div class="topo-jornal">
+                <h1>Raízes Paranaenses</h1>
+            </div>
+            <h2 class="manchete">Os Primeiros Habitantes e os Povos Africanos</h2>
+
+            <div class="colunas">
+                <h2 class="subtitulo">A Força Africana</h2>
+                <p>A presença africana no Paraná remonta aos séculos XVII e XVIII. Ao contrário do que muitos pensam, o trabalho escravizado foi motor de nossa economia inicial. Eles trabalharam arduamente nas fazendas de gado, na extração pioneira da erva-mate e na construção das vilas litorâneas.</p>
+                
+                <div class="box-imagem">
+                    <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=500&auto=format&fit=crop" alt="Cultura Africana">
+                    <div class="legenda">A influência africana está no ritmo e no DNA da nossa terra.</div>
+                </div>
+
+                <p>As contribuições culturais são imensas: na culinária (feijão, ensopados), na religião e na música, com festas como a Congada e o Fandango.</p>
+                
+                <div class="curiosidade">
+                    <strong>Fato Histórico:</strong> O censo de 1798 mostrou que a quantidade de pessoas negras escravizadas superava a de indígenas em Curitiba e Paranaguá.
+                </div>
+            </div>
+
+            <div class="rodape-folha">
+                <span>Página 02</span>
+                <a href="#p3" class="btn-proximo">Próxima Matéria →</a>
+            </div>
+        </section>
+
+        <section id="p3" class="folha">
+            <div class="topo-jornal">
+                <h1>Raízes Paranaenses</h1>
+            </div>
+            <h2 class="manchete">Os Caminhos da Imigração Estrangeira</h2>
+
+            <div class="colunas">
+                <p>No final do século XIX, o Paraná abriu suas portas para o mundo. Europeus e asiáticos chegaram para povoar o território e desenvolver a agricultura.</p>
+                
+                <div class="box-imagem">
+                    <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=500&auto=format&fit=crop" alt="Arquitetura Imigrante">
+                    <div class="legenda">A arquitetura europeia moldou cidades como Prudentópolis e Curitiba.</div>
+                </div>
+
+                <h2 class="subtitulo">Nacionalidades</h2>
+                <ul>
+                    <li><strong>Poloneses e Ucranianos:</strong> Trouxeram as pêssankas e o cultivo do centeio.</li>
+                    <li><strong>Italianos:</strong> Desenvolveram a viticultura em Santa Felicidade.</li>
+                    <li><strong>Alemães:</strong> Marcaram a indústria e marcenaria.</li>
+                    <li><strong>Japoneses:</strong> Transformaram o Norte com o cultivo de café e hortaliças.</li>
+                </ul>
+            </div>
+
+            <div class="rodape-folha">
+                <span>Página 03</span>
+                <a href="#p4" class="btn-proximo">Continuar →</a>
+            </div>
+        </section>
+
+        <section id="p4" class="folha">
+            <div class="topo-jornal">
+                <h1>Raízes Paranaenses</h1>
+            </div>
+            <h2 class="manchete">O Brasil Dentro do Paraná</h2>
+
+            <div class="colunas">
+                <h2 class="subtitulo">A Chegada de Todos os Cantos</h2>
+                <p>O Paraná não foi feito apenas de estrangeiros. Gaúchos, paulistas, mineiros e nordestinos foram atraídos pela promessa da "Terra Roxa". No Norte do estado, paulistas e mineiros expandiram o café.</p>
+                
+                <div class="box-imagem">
+                    <img src="https://images.unsplash.com/photo-1524169358666-79f22534bc6e?q=80&w=500&auto=format&fit=crop" alt="Agricultura">
+                    <div class="legenda">A migração interna foi vital para a expansão agrícola.</div>
+                </div>
+
+                <h2 class="subtitulo">Tropeirismo</h2>
+                <p>Antes das estradas, existiam os tropeiros. Conduzindo gado do RS para SP, eles fundaram cidades como Lapa, Castro e Ponta Grossa. Foram o primeiro grande elo comercial do estado.</p>
+            </div>
+
+            <div class="rodape-folha">
+                <span>Página 04</span>
+                <a href="#p5" class="btn-proximo">Conflitos Históricos →</a>
+            </div>
+        </section>
+
+        <section id="p5" class="folha">
+            <div class="topo-jornal">
+                <h1>Raízes Paranaenses</h1>
+            </div>
+            <h2 class="manchete">Guerras que Transformaram o Solo</h2>
+
+            <div class="colunas">
+                <h2 class="subtitulo">Revolução Federalista</h2>
+                <p>O Cerco da Lapa em 1894 foi um marco de sangue. Durante 26 dias, forças locais resistiram aos "Maragatos". O Barão do Serro Azul, herói paranaense, salvou Curitiba do saque, mas pagou com a vida.</p>
+                
+                <div class="box-imagem">
+                    <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?q=80&w=500&auto=format&fit=crop" alt="Guerra">
+                    <div class="legenda">Marcas de guerra ainda são visíveis nos casarões da Lapa.</div>
+                </div>
+
+                <h2 class="subtitulo">Guerra do Contestado</h2>
+                <p>Um conflito religioso e territorial entre PR e SC. Milhares de camponeses lutaram contra o governo federal pela posse da terra e sobrevivência espiritual sob a liderança de monges.</p>
+            </div>
+
+            <div class="rodape-folha">
+                <span>Página 05</span>
+                <a href="#p6" class="btn-proximo">Última Página →</a>
+            </div>
+        </section>
+
+        <section id="p6" class="folha">
+            <div class="topo-jornal">
+                <h1>Raízes Paranaenses</h1>
+            </div>
+            <h2 class="manchete">Ciclos Econômicos e a Grande Crise</h2>
+
+            <div class="colunas">
+                <p>Da erva-mate ao café, o Paraná sempre foi uma potência agrícola. Mas nem tudo foram flores.</p>
+                
+                <table>
+                    <tr>
+                        <th>Ciclo</th>
+                        <th>Impacto</th>
+                    </tr>
+                    <tr>
+                        <td>Erva-Mate</td>
+                        <td>Construiu ferrovias e palacetes.</td>
+                    </tr>
+                    <tr>
+                        <td>Madeira</td>
+                        <td>Explorou as araucárias e fundou cidades.</td>
+                    </tr>
+                    <tr>
+                        <td>Café</td>
+                        <td>Riqueza absoluta do Norte (Londrina/Maringá).</td>
+                    </tr>
+                </table>
+
+                <h2 class="subtitulo">Geada Negra de 1975</h2>
+                <p>Na madrugada de 18 de julho de 1975, o café paranaense morreu. A geada destruiu lavouras inteiras, provocando um êxodo rural massivo e mudando o estado para o plantio de soja e trigo.</p>
+
+                <div class="box-imagem">
+                    <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=500&auto=format&fit=crop" alt="Geada">
+                    <div class="legenda">A geada de 75 alterou o destino econômico do Paraná.</div>
+                </div>
+            </div>
+
+            <div class="rodape-folha">
+                <span>Página 06 (FIM)</span>
+                <a href="#p1" class="btn-proximo">Voltar ao Início ↑</a>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
